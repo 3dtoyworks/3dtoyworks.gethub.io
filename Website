@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>3-D Toy Works | Custom 3D Printed Toys</title>
+
+  <style>
+    :root{
+      --black:#05070B;
+      --panel:#0B1324;
+      --panel2:#0F1E38;
+
+      --green:#45FF2A;
+      --blue:#1EC9FF;
+      --teal:#20E3C2;
+
+      --text:#EAF2FF;
+      --muted:#9FB3D1;
+      --border:rgba(255,255,255,.12);
+
+      --glowBlue:rgba(30,201,255,.30);
+      --glowGreen:rgba(69,255,42,.28);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 520px at 15% 0%,var(--glowBlue),transparent 60%),
+        radial-gradient(900px 520px at 85% 10%,var(--glowGreen),transparent 55%),
+        linear-gradient(180deg,#02040a,var(--black));
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .wrap{max-width:1100px;margin:auto;padding:24px 18px 70px}
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:18px;
+    }
+
+    .logo{
+      height:56px;
+      filter:drop-shadow(0 10px 28px rgba(30,201,255,.35));
+    }
+
+    .btn{
+      padding:10px 16px;
+      border-radius:14px;
+      font-weight:800;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg,rgba(30,201,255,.35),rgba(69,255,42,.30));
+      border-color:rgba(69,255,42,.55);
+    }
+
+    .card{
+      background:linear-gradient(180deg,rgba(15,30,56,.85),rgba(11,19,36,.95));
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      margin-bottom:18px;
+      box-shadow:0 25px 60px rgba(0,0,0,.55);
+    }
+
+    h1,h2,h3{margin:0 0 10px}
+    p{margin:0 0 12px;color:var(--muted)}
+
+    .hero{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:16px;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:6px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.14);
+      font-size:13px;
+      margin-bottom:10px;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .photoCard{
+      border-radius:16px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.12);
+      background:#000;
+    }
+
+    .photoCard img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .photoCaption{
+      padding:10px 12px;
+      font-size:14px;
+      background:rgba(0,0,0,.55);
+    }
+
+    .grid3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+    }
+
+    .contact{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    input,textarea{
+      width:100%;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+    }
+
+    footer{
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+      margin-top:24px;
+    }
+
+    @media(max-width:900px){
+      .hero,.gallery,.grid3,.contact{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <img src="logo.png" alt="3-D Toy Works" class="logo">
+      <a href="#order" class="btn primary">Order / Custom Request</a>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <div class="badge">🚀 Kid-Made • Parent-Supported • Quality-Checked</div>
+        <h1>Custom 3D Printed Toys</h1>
+        <p>Unique fidgets, flexi shapes, and collectible figures printed in small batches.</p>
+        <a href="#gallery" class="btn primary">See Real Toys</a>
+      </div>
+
+      <div class="card">
+        <img src="logo.png" alt="3-D Toy Works Logo">
+      </div>
+    </section>
+
+    <section id="gallery" class="card">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <div class="photoCard">
+          <img src="toy-spirals.jpg" alt="Spiral Fidget Toy">
+          <div class="photoCaption">Spiral Fidget – smooth twist design</div>
+        </div>
+
+        <div class="photoCard">
+          <img src="toy-godzilla.jpg" alt="Godzilla Figure">
+          <div class="photoCaption">Monster Figure – detailed collectible</div>
+        </div>
+
+        <div class="photoCard">
+          <img src="toy-spirals-set.jpg" alt="Spiral Toy Set">
+          <div class="photoCaption">Spiral Set – multiple styles & sizes</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>How It Works</h2>
+      <div class="grid3">
+        <p><b>1.</b> Pick a toy or idea</p>
+        <p><b>2.</b> Choose colors & details</p>
+        <p><b>3.</b> Printed & delivered</p>
+      </div>
+    </section>
+
+    <section id="order" class="card">
+      <h2>Order / Custom Request</h2>
+      <div class="contact">
+        <input id="name" placeholder="Your name">
+        <input id="contact" placeholder="Email or phone">
+        <input id="toy" placeholder="Toy name or idea">
+        <textarea id="details" placeholder="Colors, quantity, deadline"></textarea>
+      </div>
+      <br>
+      <a href="#" class="btn primary" onclick="sendEmail()">Send Request</a>
+    </section>
+
+    <footer>
+      © <span id="year"></span> 3-D Toy Works • Design it. Print it. Play with it.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function sendEmail(){
+      const to="PARENT_EMAIL_HERE@example.com";
+      const body=encodeURIComponent(
+        "Name: "+name.value+
+        "\nContact: "+contact.value+
+        "\nToy: "+toy.value+
+        "\n\nDetails:\n"+details.value
+      );
+      window.location.href="mailto:"+to+"?subject=3-D Toy Works Order&body="+body;
+    }
+  </script>
+</body>
+</html>
